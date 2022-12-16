@@ -1,4 +1,6 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -6,7 +8,6 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, "dist"),
-        clean: true,
     },
     module: {
         rules: [
@@ -23,5 +24,9 @@ module.exports = {
                 type: 'asset/resource',
             },
         ]
-    }
+    },
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new HtmlWebpackPlugin({ template: './src/index.html' }),
+    ],    
 }

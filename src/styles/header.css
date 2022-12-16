@@ -6,6 +6,7 @@
 
 :root {
     --standard-padding: 16px;
+    --orange: #ffae00;
 }
 
 @font-face {
@@ -23,6 +24,8 @@ body {
     background: url('../assets/img/background-1.jpg') no-repeat center;
     background-size: cover;
     font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -63,9 +66,9 @@ li:hover::after {
     bottom: 12px;
     left: var(--standard-padding);
     width: calc(100% - 2 * var(--standard-padding));
-    border-bottom: 2px solid #ffae00;
+    border-bottom: 2px solid var(--orange);
 }
 
 li:active {
-    color: #ffae00;
+    color: var(--orange);
 }
