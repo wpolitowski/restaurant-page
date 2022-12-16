@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --standard-padding: 16px;
+}
+
+@font-face {
+    font-family: AmaticSC;
+    src: url(../assets/fonts/AmaticSC-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../assets/fonts/Montserrat.ttf);
+}
+
+body {
+    min-height: 100vh;
+    background: url('../assets/img/background-1.jpg') no-repeat center;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+}
+
+header {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
+header > h1 {
+    font-family: AmaticSC;
+    font-size: 5rem;
+    padding-top: var(--standard-padding);
+}
+
+header > ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 24px;
+}
+
+li {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    padding: var(--standard-padding);
+    margin-top: 0;
+    transition: margin-top .2s ease-in;
+}
+
+li:hover {
+    margin-top: -6px;
+}
+
+li:hover::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    bottom: 12px;
+    left: var(--standard-padding);
+    width: calc(100% - 2 * var(--standard-padding));
+    border-bottom: 2px solid #ffae00;
+}
+
+li:active {
+    color: #ffae00;
+}
