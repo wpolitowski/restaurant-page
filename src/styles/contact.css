@@ -1,0 +1,41 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+    padding: 2rem;
+    margin: 4rem;
+}
+
+.contact-container > img {
+    max-width: 600px;
+    box-shadow: 4px -4px 8px rgba(0, 0, 0, .6), -4px 4px 8px rgba(0, 0, 0, .6);
+}
+
+.contact-section-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;   
+}
+
+.contact-section > p {
+    white-space: pre-line;
+    color: #fff;
+}
+
+.contact-section:nth-child(2) > p {
+    word-spacing: 1rem;
+}
+
+.contact-section > img {
+    width: 36px;
+}

@@ -1,0 +1,43 @@
+.entry-name-price,
+.menu-container h2 {
+    font-family: AmaticSC, sans-serif;
+    color: #fff;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: 4rem;
+    align-items: flex-start;
+}
+
+.menu-container h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.savoury-container,
+.sweet-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+}
+
+.menu-entry-container > img {
+    max-width: 500px;
+    max-height: 333px;
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .8);    
+}   
+
+.entry-name-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+}

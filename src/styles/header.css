@@ -21,17 +21,29 @@
 
 body {
     min-height: 100vh;
-    background: url('../assets/img/background-1.jpg') no-repeat center;
-    background-size: cover;
+    background: url('../assets/img/background-1.jpg') no-repeat;
+    background-size: 100vw; /* prevents background from resizing when scrollbar appears */
+    /* background-attachment: fixed; */
     font-family: Montserrat, sans-serif;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-left: calc(100vw - 100%); /* prevents header resizing when scrollbar appears */
+    /* 100% is the available space without the scrollbar
+       therefore the padding is either 0 or the width of the scrollbar when present */
 }
 
 header {
+    position: sticky;
+    top: 0;
     color: #fff;
     background-color: rgba(0, 0, 0, .8);
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .8);
+}
+
+header > * {
+    width: 100vw;
 }
 
 header > h1 {
@@ -42,6 +54,7 @@ header > h1 {
 
 header > ul {
     display: inline-flex;
+    justify-content: center;
     list-style: none;
     gap: 24px;
 }
@@ -55,11 +68,13 @@ li {
     transition: margin-top .2s ease-in;
 }
 
-li:hover {
-    margin-top: -6px;
+li:hover,
+.clicked {
+    margin-top: -3px;
 }
 
-li:hover::after {
+li:hover::after,
+.clicked::after {
     display: inline-block;
     position: absolute;
     content: "";

@@ -1,6 +1,6 @@
 import '../styles/home.css'
 
-function createHomepage() {
+function createHomePage() {
     const container = document.createElement('div')
     const homeInfo = document.createElement('div')
     const h2 = document.createElement('h2')
@@ -18,7 +18,7 @@ function createHomepage() {
     menuBtn.textContent = "Alright, let's go!"
 
     homeInfo.append(h2, para, para2, menuBtn)
-    container.appendChild(homeInfo)
+    container.append(homeInfo)
     document.body.append(container)
 }
 
@@ -28,4 +28,4 @@ function clickListener(element) {
     })
 }
 
-export default createHomepage
+export default createHomePage
