@@ -1,38 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --standard-padding: 16px;
-    --orange: #ffae00;
-}
-
-@font-face {
-    font-family: AmaticSC;
-    src: url(../assets/fonts/AmaticSC-Bold.ttf);
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../assets/fonts/Montserrat.ttf);
-}
-
-body {
-    min-height: 100vh;
-    background: url('../assets/img/background-1.jpg') no-repeat;
-    background-size: 100vw; /* prevents background from resizing when scrollbar appears */
-    /* background-size: auto; */
-    background-attachment: fixed;
-    font-family: Montserrat, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: calc(100vw - 100%); /* prevents header resizing when scrollbar appears */
-    /* 100% is the available space without the scrollbar
-       therefore the padding is either 0 or the width of the scrollbar when present */
-}
 
 header {
     position: sticky;
@@ -48,7 +13,7 @@ header > * {
 }
 
 header > h1 {
-    font-family: AmaticSC;
+    font-family: AmaticSC, sans-serif;
     font-size: 5rem;
     padding-top: var(--standard-padding);
 }
