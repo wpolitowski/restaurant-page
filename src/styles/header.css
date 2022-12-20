@@ -23,7 +23,8 @@ body {
     min-height: 100vh;
     background: url('../assets/img/background-1.jpg') no-repeat;
     background-size: 100vw; /* prevents background from resizing when scrollbar appears */
-    /* background-attachment: fixed; */
+    /* background-size: auto; */
+    background-attachment: fixed;
     font-family: Montserrat, sans-serif;
     display: flex;
     flex-direction: column;
