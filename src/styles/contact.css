@@ -13,6 +13,8 @@
 .contact-container > img {
     max-width: 600px;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, .6), -4px 4px 8px rgba(0, 0, 0, .6);
+    border: 4px solid var(--orange);
+    border-radius: 6px;
 }
 
 .contact-section-container {
